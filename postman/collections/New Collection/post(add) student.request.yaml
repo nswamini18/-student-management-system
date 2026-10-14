@@ -1,0 +1,20 @@
+$kind: http-request
+description: ""
+url: http://localhost:8080/students
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"id\": 90,\r
+
+    \  \"name\": \"\",\r
+
+    \  \"age\": 20,\r
+
+    \  \"department\": \"CS\",\r
+
+    \  \"email\": \"test90@test.com\"\r
+
+    }"
+order: 4421895163687877

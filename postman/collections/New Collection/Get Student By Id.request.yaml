@@ -1,0 +1,5 @@
+$kind: http-request
+description: ""
+url: http://localhost:8080/students/51
+method: GET
+order: 3189187557583069

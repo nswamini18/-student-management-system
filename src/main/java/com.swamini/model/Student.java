@@ -1,11 +1,29 @@
 package com.swamini.model;
 
+import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.util.List;
+
+@Entity
+@Table(name = "students")
 public class Student {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private int age;
     private String department;
     private String email;
+
+    @OneToMany(mappedBy = "student")
+    @JsonIgnore
+    private List<Marks> marksList;
+
+    @OneToMany(mappedBy = "student")
+    @JsonIgnore
+    private List<Attendance> attendanceList;
+
+    public Student() {}
 
     public Student(int id, String name, int age,
                    String department, String email) {
